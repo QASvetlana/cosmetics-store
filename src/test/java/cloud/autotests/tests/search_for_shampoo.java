@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class search_for_shampoo {
+public class search_for_shampoo extends TestBase {
     @Test
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("tests1")
