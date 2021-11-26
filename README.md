@@ -44,20 +44,31 @@ Jenkins job
 * threads (number of threads)
 
 
-Run tests with filled remote.properties:
+###Для запуска тестов используются команды:
+Если файл local.properties заполнен, то для запуска тестов необходимо выполнить команду:
 ```bash
 gradle clean test
 ```
 
-Run tests with not filled remote.properties:
+###Если файл local.properties не заполнен, то для запуска тестов необходимо выполнить команду:
 ```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
+gradle clean test
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DbrowserMobileView="${BROWSER_MOBILE}"
+-DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/ -Dthreads=${THREADS}
 ```
 
-Serve report:
+Генерация отчета:
 ```bash
 allure serve build/allure-results
 ```
+
+
+
+
 
 
 ###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
