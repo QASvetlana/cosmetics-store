@@ -1,7 +1,33 @@
-# Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
+# Пример создания автотестов для сайта 
+# косметической компании [Oriflame](https://www.oriflame.ru/)
 
-# Jenkins job
+В данном проекте представлен пример создания UI автотестов для web-версии сайта
+https://www.oriflame.ru
+## Тестируемая область:
+
+- [ ]  Title главной страницы;
+- [ ] Поле поиска;
+- [ ] Добавление товара в корзину.
+
+## Использован стек технологий:
+
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Intelij_IDEA.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Java.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Selenide.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Allure_Report.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/JUnit5.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Gradle.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Github.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Jenkins.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40"/>
+<img alt="This is an image" height="40" src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="40"/>
+
+# Конфигурация для запуска тестов
+Параметры для запуска автотестов в удаленном браузере на билд-сервере проекта
+autotests.cloud задаются в настройках job CI Jenkins в виде Choice Parameter 
+и передаются в код проекта через терминал как системные переменные (в фигурных скобках) с помощью следующих команд:
+Jenkins job
 <a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
 
 
