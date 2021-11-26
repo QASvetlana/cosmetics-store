@@ -1,6 +1,5 @@
 package cloud.autotests.tests;
 
-import cloud.autotests.helpers.DriverUtils;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
@@ -9,24 +8,21 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byCssSelector;
-import static com.codeborne.selenide.Selenide.*;
-import static io.qameta.allure.Allure.step;
-import static org.assertj.core.api.Assertions.assertThat;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 @Feature("Product search")
-public class search_for_shampoo extends TestBase {
+public class search_with_wrong_name extends TestBase {
     @Test
-    @AllureId("5944")
+    @AllureId("5936")
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
-    @DisplayName("search for shampoo")
+    @DisplayName("search with an error in the name")
     void generatedTest() {
         open("https://www.oriflame.ru/");
-        $(byCssSelector(".search__input_HsvAG")).setValue("Шампунь");
+        $(byCssSelector(".search__input_HsvAG")).setValue("qwerty");
 
-        $(".popular-search-queries__query-link__xoST").shouldHave(text("шампунь"));
+        $(".popular-products__heading__PZhn").shouldHave(text("Популярные продукты в этом поисковом запросе"));
     };
 
 
 }
-
-
