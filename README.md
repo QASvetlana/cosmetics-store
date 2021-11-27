@@ -37,6 +37,17 @@ test
 -Dthreads=${THREADS} // число потоков для прогона тестов
 allure serve build/allure-results Генерация отчета
 ```
+### Для запуска автотестов на удаленной машине использован bild server Jenkins
+![image](src/test/resources/files/jenkins.jpg)
+### Тестовая документация хранится в Allure TestOpts
+![image](src/test/resources/files/allure_testopt.jpg)
+### Отчетность генерируется с помощью Allure reports
+![image](src/test/resources/files/allure.jpg)
+### Уведомления о результатах тестирования уходят в Telegram
+![image](src/test/resources/files/telegram.jpg)
+### Видеотчет теста "Поиск товара"
+![image](src/test/resources/files/Video.gif)
+
 
 
 
